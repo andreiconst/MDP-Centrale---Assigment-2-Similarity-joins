@@ -2,25 +2,24 @@
 
 ## Preliminary information
 
-In this assignment we will design code to implement document comparison. As data we will use the complete Shakespeare 
-corpus and treat each line as a document. The final aim will be to select only the lines that are more similar than a fixed threshold 
-of 0.8.
+In this assignment we will design algorithms to implement similarity joins. As data we will use the complete Shakespeare 
+corpus and treat each line as a document. The final aim will be to select only the lines/documents that have a similarity above a fixed threshold of 0.8.
 
 ## Pre-process the input
 
 The preprocessing of the input required us to get rid of all non alpha-numerical characters, and to order the words in the sentence by 
 ascending order of global frequency.<br /><br />
 
-We could not manage to do this in one pass through memory, even though we imagnine there might be a way to do so. Instead we relied on 
+We could not manage to do this in one pass through memory, even though we imagine there might be a way to do so. Instead we relied on 
 a preprocessing in two phases. <br />
 
-1- Count all the words, and store them along with their frequencies in a table
+1- Compute words frequencies, and store them in a file
 2- Read this table in the reduce phase in order to figure out in which order to add the words<br /><br />
 
-The code for the first is pretty straight forward and relies on the code we implemented for the first assignment, 
+The code for the first part of the preprocessing is pretty straight forward and relies on the code we implemented for the first assignment, 
 in counting the stopwords.<br /><br />
 
-The Second part of the code is more interesting. Below the mapper part of the code. We read the data, and 
+The second part of the preprocessing is more interesting. Below the mapper part of the code. We read the data, and 
 tokenize the text, outputting a line code as key, and the words as values.
 
 ```javascript
@@ -42,9 +41,9 @@ tokenize the text, outputting a line code as key, and the words as values.
 	   }
 ```
 
-For the reducer part we use an arraylist and the package collection in a hand-written implementation of an ascending sort.
+For the reducer part we use an arraylist and the package collection to implementat a and-written sorting algorithm.
 We have two Arraylists to store both the words and their respective counts. Then we use the collections package to find
-the minimum of the list, then we store it, and delete the row of our list. Below is our code for the reducer:
+the minimum of the list, then we store it, and delete the corresponding rows in our lists. Below is our code for the reducer:
 
 ```javascript
  
@@ -54,14 +53,14 @@ the minimum of the list, then we store it, and delete the row of our list. Below
 ## Naive approach of similarity join
 
 ### Mapper
-Here we will to the calculations of Jacquard similarity between all possible pairs.<br /><br />
+Here we will do the calculations of Jacquard similarity between all possible pairs.<br /><br />
 
-The first step is therefore in the mapper to combine all these possible pairs. To do so we use the idea tha Jacquard similarity is 
+The first step is in the mapper to combine all these possible pairs. To do so we use the idea tha Jacquard similarity is 
 a measure of distance. Therefore there is no need to compute the full matrix of distances, but only a lower triangular matrix of distances.<br />
 Because d(i,i) = 0 for all i<br />
 And d(i,j) = d(j,i) for all i,j<br />
 This reduces the number of pairs that should be computed from n² to n*(n-1)/2<br />
-We remark that still this algorithm is quadratic in the input size, whiwh implies increased computational time.<br />
+We remark that still this algorithm is quadratic in the input size, which implies increased computational time and memory requirements.<br />
 
 Below is our mapper that implements this lower triangular matrix of distance:
 ```javascript
@@ -99,8 +98,7 @@ Note the docs_seen.size()-1 in order to avoid comparing each document with itsel
 
 For the reducer we have simply to compute the Jacquard similarity.<br /><br />
 
-Still, we transformed the formula of the Jacquard similarity to ease the calculation. Indeed, to compute the Jacquard similarity
-from the number of unique words in the 2 documents as well as from the count of the toal words in each document.<br />
+Still, we transformed the formula of the Jacquard similarity to ease the calculation. Indeed, we used the idea that we can compute the Jacquard similarity only from the number of unique words in the 2 documents as well as from the count of the total words in each document.<br />
 Therefore the Jacquard formula becomes :<br />
 J(i,j) = [#TotalWords - #UniqueWords ] / (#UniqueWords) <br />
 Because [#TotalWords - #UniqueWords ] = # Words in common <br />
@@ -174,20 +172,20 @@ public static class Map extends Mapper<LongWritable, Text, Text, Text> {
 	}
 ```
 
-We first create and stored the inverted index into a Hashmap. For each word either adding it to the inverted index, or updating
+We first create and store the inverted index into a Hashmap. For each word either adding it to the inverted index, or updating
 the String of document_ids that contain it. Then we use the cleanup method to write the mapper output.<br />
 
 
 ### Reducer
 
 The mapper gives us thus as output the id of documents we should compare. This is precious since it allows us to 
-reduce dramatically the number of comparisons needed. <br /><br />
+reduce dramatically the number of comparisons needed and the memory requirements. <br /><br />
 
 We first have to load the input file again and keep it in memory. <br />
 
 Then we have to recover the pairs of document we have to compare and perform the comparison. 
-To do all the required comparisons we perform a nested loop. Afterwards we compare the Jacquard 
-similarity comparison as discussed before.<br /><br />
+To do all the required comparisons we perform a nested loop. Afterwards we compute the Jacquard 
+similarity as before.<br /><br />
 
 Below is our code for the reducer:
 
@@ -228,20 +226,18 @@ Below is our code for the reducer:
 
 Let us note two things:<br /><br />
 - First, on the commented out part. Our idea was to store in memory, in a Hashmap all the comparisons we already 
-perform, in order to not do the same comparison time, and thus to save computational resources and time. Hewever this was
+performed, in order to avoid doing the same comparison twice, and thus to save computational resources and time. However this was
 to prove not such a fortunate idea. Indeed this seen_document Hashmap grows very quickly in size, 
-and we ran out of memory after some time(at 92% of the reducer process). Furthermore we think that parsing the Hashmap in order to verify 
-if we already did the computation takes much more time that actually doing the computation. Our solution is to simply skip this step
-and perform the computation in all cases. But this has the disadvantage of producing dupplicates. Therefore we need to store the pairs we have 
+and we ran out of memory after some time(at 92% of the reducer process). Furthermore we think that parsing the Hashmap in order to verify if the considered pair's similarity was already computed takes much more time that actually doing the computation. Our solution is to simply skip this step and perform the computation in all cases, notwithstanding if we already did it before. But this has the disadvantage of producing dupplicates. Therefore we need to store the pairs we have 
 written in memory and verify we do not write a similar pair of documents twice.<br />
-- Second, possibly because of our Bufferreader parsing method, we had the but that each document had one extra word, i.e. the space word. We could not find the source of this extra spece word, so we fixed the bug by just reducing the number of unique words by one.
+- Secondly, possibly because of our Bufferreader parsing method, we had the bug that each document had one extra word, i.e. the space word. We could not find the source of this extra space word that occured for each and every document, so we fixed the bug by just reducing the denominator of our equation by one.
 
 ## Conclusion, comparison of the two algorithms, number of computations
 
 We ran both algorithms first on a sample of the dataset containing 618 lines. This was in part for testing our code quickly and 
 in part because we were unable to run the naive algorithm on the whole dataset, because of memory problems. <br /><br />
 
-Below are the number of computation performed by both algorithms:<br />
+Below are the number of computation performed by both algorithms on the reduced dataset:<br />
 #Computation Naive algorithm Reduced Dataset : 190 962<br />
 #Computation Inverted index algorithm Reduced Dataset : 5454<br />
 We see that computation are reduced by a factor of 40 here.<br /><br />
@@ -254,10 +250,9 @@ see that the Inverted Index technique requires empirically far less computation 
 
 Even though we could not run the Naive algorithm on the full dataset because of memory problems, we can easily compute the number
 of computations it would have required. <br />
-#Computations Naive algorithm = n * (n-1)/2 = 115 102 * (115102-1) / 2 = 6 624 177 651<br />
+#Computations Naive algorithm = n * (n-1)/2 = 115 102 * (115 102-1) / 2 = 6 624 177 651<br />
 #Computations required Inverted indew algorithm = 121 891 000<br />
-So the Inverted index algorithm reduces the number of computations by a factor of 60 on the full dataset. And this is without mentioning the memory gain which is much greater, because here we do not store anything in memory, and discard non relevant pairs as soon as their similarity
-is computed.
+So the Inverted index algorithm reduces the number of computations by a factor of 60 on the full dataset. And this is without mentioning the memory gain which is much greater, because here we do not store anything in memory, and discard non relevant pairs as soon as their non-similarity is confirmed.
 <br /><br />
 
 In conclusion, we implemented two similarity join algorithms in a mapreduce framework. We saw that quadratic requirements in  computations and memory with respect to the size of the input can quickly be overwhelming. Therefore a smarter approach, based on 
