@@ -23,7 +23,7 @@ The second part of the preprocessing is more interesting. Below the mapper part 
 tokenize the text, outputting a line code as key, and the words as values.
 
 ```javascript
-      public static class Map extends Mapper<LongWritable, Text, LongWritable, Text > {
+   public static class Map extends Mapper<LongWritable, Text, LongWritable, Text > {
 	      private Text word = new Text();
 	      @Override
 	      public void map(LongWritable key, Text value, Context context)
@@ -46,7 +46,34 @@ We have two Arraylists to store both the words and their respective counts. Then
 the minimum of the list, then we store it, and delete the corresponding rows in our lists. Below is our code for the reducer:
 
 ```javascript
- 
+       public void reduce(LongWritable key, Iterable<Text> values, Context context)
+              throws IOException, InterruptedException {
+
+		     ArrayList<String> word_list = new ArrayList<String>(); // store words in the document
+			 ArrayList<Integer> word_count = new ArrayList<Integer>(); //store word counts of the words in the document
+			 String sorted_words = new String();  // store final word list sorted
+
+			 for (Text word : values){ // store the words and their counts in two listed with matching indexes
+				 if(wordCount.containsKey(word.toString())){
+					 if(!word_list.contains(word.toString())){
+						 word_list.add(word.toString()); 
+						 word_count.add(wordCount.get(word.toString().toLowerCase())); 
+					 }
+				 }
+			 }
+			 
+			 while(word_list.size()>0){ // remove iteratively the word with the minimum count until no word is left
+				     int selected_index = word_count.indexOf(Collections.min(word_count));
+				     String selected_word = word_list.get(selected_index);
+				     sorted_words = sorted_words + " " + selected_word; 
+				     word_count.remove(selected_index);
+				     word_list.remove(selected_index);
+			 }
+			 
+	     	 context.write(key, new Text(sorted_words));
+	      }
+	   
+}
 ```
 
 
@@ -65,25 +92,25 @@ We remark that still this algorithm is quadratic in the input size, which implie
 Below is our mapper that implements this lower triangular matrix of distance:
 ```javascript
    public static class Map extends Mapper<LongWritable, Text, Text, Text> {
-      ArrayList<String> docs_seen = new ArrayList<String>();
+      ArrayList<String> docs_seen = new ArrayList<String>();  //Create the array with the seen documents
       @Override
       public void map(LongWritable key, Text value, Context context)
               throws IOException, InterruptedException {
     	
-    	String[] token = value.toString().split("\\s+"); 
+    	String[] token = value.toString().split("\\s+"); // split the words
     	
     	String document = new String();
-    	for(int i = 1; i < token.length; i++){ 
+    	for(int i = 1; i < token.length; i++){ // store the words
     		document = document + token[i] + " ";
     	}
-    	document = document.substring(0, document.length()-1);
+      	document.replaceAll("\\s+$", ""); // delete final space
     	docs_seen.add(document.toString());
     	
-	    	for(int i = 0; i < docs_seen.size()-1; i++){
+	    	for(int i = 0; i < docs_seen.size()-1; i++){ // store all possible pairs along with the words of both pairs
 	    			String compared_couple = new String();
 		    		String all_words = new String();
 		    		compared_couple = "(d" + String.valueOf(i) + ", d" + String.valueOf((int) docs_seen.size()-1) + ")";
-		    		all_words = docs_seen.get(i)+" "+docs_seen.get(docs_seen.size()-1);
+		    		all_words = docs_seen.get(i)+" "+docs_seen.get(docs_seen.size()-1); // the minus one to not compare the document with itself
 					context.write(new Text(compared_couple), new Text(all_words));		
 	    	}
       }
@@ -109,23 +136,23 @@ to be similar. In our opinion this was a nice feature to have.<br /><br />
 
 Below is the reducer implementing this similarity join:
 ```javascript
-   public static class Reduce extends Reducer<Text, Text, Text, Text> {
+public static class Reduce extends Reducer<Text, Text, Text, Text> {
       
 	  public void reduce(Text key, Iterable<Text> value, Context context)
               throws IOException, InterruptedException {
-		 HashSet<String> outer = new HashSet<String>();
-		 List<String> full = new ArrayList<String>();
+		 HashSet<String> outer = new HashSet<String>(); // store the unique words
+		 List<String> full = new ArrayList<String>(); // store words of both documents
 		 
-		 for(Text token : value){
+		 for(Text token : value){ // add words either to arraylist (all words) or hashset(unique words) 
 			 for(String word  : Arrays.asList(token.toString().split("\\s+"))){
 			 outer.add(word);
 			 full.add(word);
 		 }
 
 		 
-		 Double similarity = ((double) (full.size() - outer.size()))/ ((double)outer.size());
-		 if(similarity >= 0.8){
-		    	 context.write(new Text(key), new Text(similarity+""));
+		 Double jacquard_similarity = ((double) (full.size() - outer.size()))/ ((double)outer.size()); // compute similarity
+		 if(jacquard_similarity >= 0.8){
+		    	 context.write(new Text(key), new Text(jacquard_similarity+""));
 	     }
 		 }
       }
@@ -144,14 +171,14 @@ are similar.
 In our mapper we implemented this inverted index. Below our code for the mapper:
 ```javascript
 public static class Map extends Mapper<LongWritable, Text, Text, Text> {
-      Integer count = 0;
-	  HashMap<String, String> inverted_index = new HashMap<String, String>();
+      Integer count = 0; // to be used ad id of the document
+	  HashMap<String, String> inverted_index = new HashMap<String, String>(); // to be used in the cleanup
 
       @Override
       public void map(LongWritable key, Text values, Context context)
               throws IOException, InterruptedException {
     	  String[] token = values.toString().split("\\s+");
-    	 for (int i = 1; i < (int) ((double) token.length * 0.8 + 1);i++) {
+    	 for (int i = 1; i < (int) ((double) token.length * 0.8 + 1);i++) { // put in the HashMap couple word doc_id
     		 if(inverted_index.get(token[i])==null){
     			 inverted_index.put(token[i],count+""); 
     		 }
@@ -190,38 +217,71 @@ similarity as before.<br /><br />
 Below is our code for the reducer:
 
 ```javascript
+public static class Reduce extends Reducer<Text, Text, Text, Text> {
+	   
+		 File input_file = new File("/home/cloudera/workspace/document_similarity/reduced_input.txt"); 
+		 ArrayList<String> input = new ArrayList<String>();  // store input file, only need for the words, index will serve as doc_id
+		 HashMap<String, String> seen_pairs = new HashMap<String, String>(); // store seen pairs
+		 ArrayList<String> written_pairs = new ArrayList<String>(); // store the written pairs to avoid duplicates
+		 int count = 0; // counter for number of computations
+
+	  	  protected void setup(Context context) throws IOException, InterruptedException { // read input file again
+	  		  
+	  	  	  BufferedReader read = new BufferedReader(new FileReader(input_file)); 
+	     	  String line = null;
+	     	  while ((line = read.readLine()) != null){
+	     		  String[] token = line.toString().split("\\s+");
+	     		  String document = new String();
+	          	  for(int i = 1; i < token.length; i++){
+	          		  document = document + " " +token[i];
+	          	  }
+	          	document.replaceAll("\\s+$", "");
+	          	input.add(document);
+	     	  }
+	     	  read.close();     	
+	  	  }
+	  	  
+
+      
 	  public void reduce(Text key, Iterable<Text> values, Context context)
               throws IOException, InterruptedException {
 		  for(Text val:values){
 		  String[] doc_of_interest = val.toString().split("\\s+");
-			  for(int i=0; i<doc_of_interest.length-1;i++){
+			  for(int i=0; i<doc_of_interest.length-1;i++){ // nested loop to compute all necessary similarities
 				  for(int j=i+1; j<doc_of_interest.length;j++){
-						  int previous = Integer.parseInt(doc_of_interest[i]);
-						  int current = Integer.parseInt(doc_of_interest[j]);
+					  	  count++;
+						  int previous = Integer.parseInt(doc_of_interest[i]); // store first compared term
+						  int current = Integer.parseInt(doc_of_interest[j]); // store second compared term
 						  if(current!=previous){
-							  String pair = "(d" + previous + ", d"+ current +")";
+							  String pair = "(d" + previous + ", d"+ current +")"; 
 //							  if(!seen_pairs.containsKey(previous+"") || !seen_pairs.get(previous+"").contains(current+"")) {
-//									  String string_before = seen_pairs.get(previous+"");
-//									  seen_pairs.put(previous+"", string_before + " "+ current + "");;
-									  String all_words = input.get(previous) +  input.get(current);
-									  HashSet<String> outer = new HashSet<String>();
-									  ArrayList<String> full = new ArrayList<String>();
-									  for(String word : Arrays.asList(all_words.split("\\s+"))){
-										  full.add(word);
-										  outer.add(word);			  
-									  }
-									  Double similarity = ((double) (full.size() - outer.size()))/ ((double)outer.size()-1);
-									  if(similarity >= 0.8 && !written_pairs.contains(pair)){
-										  written_pairs.add(pair);
-									      context.write(new Text(pair), new Text(similarity+""));
-								     }
+//								  String string_before = seen_pairs.get(previous+"");
+//								  seen_pairs.put(previous+"", string_before + " "+ current + "");;
+								  String all_words = input.get(previous) +  input.get(current); // combine words of the 2
+								  HashSet<String> outer = new HashSet<String>(); // unique words
+								  ArrayList<String> full = new ArrayList<String>(); // all words
+								  for(String word : Arrays.asList(all_words.split("\\s+"))){
+									  full.add(word);
+									  outer.add(word);			  
+								  }
+								  Double similarity = ((double) (full.size() - outer.size()))/ ((double)outer.size()-1); // the -1 in the 
+								   // denominator because we have an extra word, space that ha appeared in all our documents
+								  if(similarity >= 0.8 && !written_pairs.contains(pair)){ // write the pair only if the
+									  // similarity coefficient is high enough and if we did not already write it before
+									  written_pairs.add(pair);
+								      context.write(new Text(pair), new Text(similarity+""));
+							     }
 //							  }
 						  }
 				  }
 			  }
 		  }
-
+		  if((double) count % 1000==0){ // for counting purposes
+		  System.out.println(count);
+		  }
    }
+
+}
 ```
 
 Let us note two things:<br /><br />
