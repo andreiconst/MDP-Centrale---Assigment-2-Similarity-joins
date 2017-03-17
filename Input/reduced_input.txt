@@ -1,0 +1,618 @@
+0	ebook complete shakespeare works gutenberg project william 
+78	shakespeare william 
+101	anyone anywhere ebook cost use at no 
+167	restrictions whatsoever copy almost away give may or no 
+237	included license terms under re gutenberg project use 
+306	online org www ebook gutenberg at or 
+356	details copyrighted ebook below gutenberg project 
+424	guidelines file copyright follow please 
+494	title complete shakespeare works william 
+546	author shakespeare william 
+577	september 11 posting ebook date 2 1 
+623	january release date 4 1 
+654	language english 
+677	ebook start complete shakespeare works gutenberg project william 
+768	produced future inc library world their from 
+843	presented file etext gutenberg project 1 th 
+909	cooperation presented inc library world their from 
+975	cdroms future library shakespeare gutenberg project 
+1041	releases etexts placed domain public often are 
+1109	shakespeare 
+1124	implications certain read copyright etext has should 
+1192	version complete works william electronic 
+1252	inc library copyright shakespeare 3 1 world 
+1319	illinois benedictine college etext provided gutenberg project 
+1388	machine readable permission copies electronic may 
+1453	others distributed copies long 1 such or are 
+1516	personal used 2 distributed only use or are 
+1572	commercially prohibited commercial includes distribution any 
+1639	membership download charges service time or 
+1702	cooperate proud library gutenberg project world 
+1768	presentation complete shakespeare works william 
+1834	education however reading entertainment 
+1900	shareware domain public neither library under nor 
+1966	presentation future conditions charges may no 
+2032	encouraged material access made any are 
+2098	allowed anyone charges away give like no are 
+2172	print small complete shakespeare 
+2225	version complete works william electronic 
+2283	inc library copyright shakespeare 3 1 world 
+2343	etext provided gutenberg project 
+2390	illinois benedictine college permission 
+2439	etexts unlike tm etext gutenberg project since many other 
+2504	materials methods protected copyright since 
+2569	copy reputation effect project right use 
+2635	distribute limited laws copyright other 
+2701	statement print conditions small 
+2753	license 1 
+2768	encouraged distribute electronic may are 
+2832	machine readable etext copies long such 
+2895	personal 2 others only use 1 or are 
+2958	commercially prohibited commercial used distributed or 
+3016	download includes distribution charges service any 
+3080	membership time or 
+3107	b license conditions honor subject 
+3170	provisions replacement refund print small 
+3232	statement exact distribute etext copies 
+3296	statement including print small copies can such 
+3355	resulting proprietary compressed including form any or 
+3421	processing software hypertext word long from or 
+3478	either 
+3491	displayed clearly readable etext does 1 when 
+3557	characters intended contain those other than 
+3618	tilde asterisk author although work 
+3678	underline punctuation characters convey used may 
+3740	additional characters author intended used may 
+3805	indicate hypertext links or 
+3842	convertible readily reader etext 2 at no 
+3904	ebcdic equivalent ascii expense form plain into or 
+3966	program displays instance case etext 
+4032	processors word most or 
+4068	agree provide request 3 at or on no 
+4126	additional expense copy fee cost plain etext or 
+4191	ascii 
+4203	disclaimer warranty damages limited 2 
+4250	incomplete defect contain form etext may 
+4312	inaccurate data transcription errors corrupt copyright or 
+4378	infringement damaged virus disk computer defective other or 
+4444	codes equipment damage read cannot or 
+4508	described replacement refund below right or 
+4571	party receive etext project other any may from 
+4636	disclaims liability tm etext gutenberg project all 
+4702	expenses legal costs damages fees including 
+4767	liability remedies negligence strict under or no 
+4829	warranty limited including contract breach or 
+4891	consequential incidental punitive damages indirect even or if 
+4957	possibility damages notice give such 
+5012	defect discover receiv days etext within if 
+5078	ing refund paid receive money any can if 
+5143	explanatory sending note within time an 
+5206	physical received person from on if 
+5270	medium note person return must such may 
+5334	alternatively replacement copy choose give if 
+5396	electronically received choose person such may 
+5451	alternatively opportunity receive second give 
+5510	electronically 
+5529	otherwise etext provided other no 
+5589	implied warranties express kind made any or are 
+5653	medium including etext any may or on 
+5713	merchantability warranties fitness limited or 
+5772	disclaimers states allow particular purpose some do 
+5834	consequen exclusion implied limitation warranties or 
+5899	tial exclusions disclaimers damages above may 
+5962	legal apply rights other may 
+6016	indemnity indemnify its 3 project hold 
+6077	directors lia agents members harmless officers from all 
+6141	bility legal fees including expense arise cost 
+6201	indirectly directly following any from or do 
+6266	alteration b distribution etext cause 
+6322	modification defect c addition etext any or 
+6384	4 don want money send even t if 
+6449	dedicated increasing number gutenberg project 
+6509	licensed domain freely public works distributed can 
+6574	gratefully accepts form machine readable project 
+6633	scanning machines ocr software contributions money time 
+6697	licenses etexts domain royalty public free copyright 
+6757	pro whatever paid money else think can should 
+6821	ject association illinois benedictine college gutenberg 
+6884	kramer attorney b print small charles 
+6936	internet 26compuserve tel 254 726 212 com 5 3 2 
+6995	print small complete shakespeare 
+7049	12 8 print v small 3 
+7079	version complete works william electronic 
+7139	inc library copyright shakespeare 3 1 world 
+7206	illinois benedictine college etext provided gutenberg project 
+7275	machine readable permission copies electronic may 
+7340	others distributed copies long 1 such or are 
+7403	personal used 2 distributed only use or are 
+7459	commercially prohibited commercial includes distribution any 
+7526	membership download charges service time or 
+7595	16 
+7603	sonnets 
+7618	shakespeare william 
+7648	1 
+7672	increase creatures fairest desire from we 
+7718	thereby rose beauty die might never 
+7765	riper decease time should 
+7809	memory heir tender might bear 
+7851	contracted bright thine eyes own 
+7900	substantial fuel flame feed self light st 
+7957	famine abundance making lies where 
+7998	foe cruel self sweet too 
+8048	ornament fresh world art now 
+8097	gaudy herald spring only 
+8137	buriest bud content thine within own 
+8182	niggarding churl mak waste tender st 
+8230	glutton pity else world or 
+8276	due eat grave world thee 
+8332	2 
+8356	winters besiege forty brow when shall 
+8402	trenches dig deep field beauty 
+8450	gazed livery proud youth now on 
+8495	tattered weed held small worth 
+8543	asked beauty lies being where then all 
+8591	lusty treasure days where all 
+8636	sunken deep thine within eyes own say 
+8681	thriftless eating praise shame were an all 
+8733	deserved praise beauty use much how more 
+8784	couldst child answer fair mine if 
+8835	sum excuse count old make shall 
+8882	proving succession beauty thine 
+8925	new old made art were when 
+8974	warm feel cold blood st see when 
+9033	3 
+9057	viewest glass face look tell 
+9110	form face another time should now 
+9160	renewest repair fresh whose now if 
+9208	unbless beguile dost mother world some 
+9261	uneared womb whose fair where she 
+9308	tillage disdains husbandry 
+9350	tomb fond who or 
+9392	posterity stop self love 
+9431	glass mother art she thee 
+9478	prime april lovely calls back her 
+9523	windows age through shalt thine see 
+9574	wrinkles despite golden time 
+9619	remembered live if 
+9663	image single dies thine die thee 
+9715	4 
+9739	loveliness unthrifty spend dost why 
+9784	legacy self beauty upon 
+9822	bequest lend gives nature nothing doth 
+9871	frank lends free those being she are 
+9919	niggard beauteous abuse dost why then 
+9966	largess bounteous given give thee 
+10011	profitless usurer dost use why 
+10050	sums sum canst live great yet 
+10096	traffic having self alone 
+10139	deceive self dost sweet 
+10188	calls nature gone when how then thee 
+10235	acceptable audit canst leave 
+10278	tombed unused beauty must thee 
+10327	executor lives used th which 
+10373	5 
+10397	frame hours work gentle those did 
+10444	gaze dwell lovely eye every doth where 
+10490	tyrants same play very 
+10533	unfair excel fairly doth which 
+10577	resting leads summer never time on 
+10619	confounds hideous winter there 
+10665	checked frost sap lusty leaves quite gone 
+10720	snowed bareness beauty every er where o 
+10768	distillation summer left were then 
+10812	liquid pent glass prisoner walls 
+10857	bereft effect beauty were 
+10901	remembrance nor was no 
+10943	distilled flowers winter meet though they 
+11000	leese substance lives show still sweet their 
+11066	6 
+11090	deface ragged winter hand then let 
+11135	distilled summer ere thee 
+11180	vial treasure place sweet some make 
+11231	killed treasure self beauty ere 
+11280	usury forbidden use 
+11316	happies loan willing pay those which 
+11366	breed self another thee 
+11412	happier ten times one or 
+11455	happier ten times self art were than 
+11505	refigured ten times thine thee if 
+11550	depart shouldst could death then if do 
+11603	posterity leaving living thee 
+11640	willed self fair art much too 
+11692	worms conquest heir thine death make 
+11751	7 
+11775	orient lo gracious light when 
+11819	lifts burning each under eye head up 
+11864	appearing homage sight new doth 
+11907	serving sacred looks majesty 
+11949	climbed steep hill heavenly having up 
+11999	resembling middle strong age youth 
+12045	adore mortal looks beauty still yet 
+12089	pilgrimage attending golden on 
+12128	highmost pitch car weary when from 
+12176	reeleth feeble age day like from 
+12220	converted duteous fore eyes now are 
+12265	tract low another way look from 
+12309	noon going self out 
+12355	unlooked diest unless get son on 
+12405	8 
+12429	sadly music hear st why 
+12477	sweets delights joy war 
+12529	gladly receiv lov st why which 
+12586	annoy receiv pleasure else thine st or 
+12634	tuned concord sounds true well if 
+12679	unions offend married ear thine do 
+12721	confounds sweetly chide who they thee do 
+12770	singleness shouldst parts bear 
+12822	string mark husband another sweet one how 
+12871	ordering mutual strikes each 
+12915	resembling sire happy child mother 
+12964	pleasing sing note who one do all 
+13010	speechless seeming song many whose being one 
+13062	single sings prove wilt none thee 
+13146	wet widow eye fear 
+13186	consum single self life st 
+13234	issueless hap ah shalt die if 
+13277	makeless wail wife world like thee 
+13327	widow weep still world 
+13374	behind form left hast thee no 
+13421	private widow keep every may when well 
+13464	shape children husband mind eyes her 
+13516	unthrift spend world look doth an 
+13565	shifts enjoys place still world 
+13621	waste beauty end world an hath 
+13669	destroys unused user kept 
+13713	sits toward bosom others love no 
+13759	commits murd rous shame himself such on 
+13814	1 
+13839	deny shame bear any st love 
+13887	unprovident self art who 
+13927	beloved grant wilt many art if 
+13976	evident lov none st most 
+14022	possessed murd rous hate art 
+14072	conspire stick gainst self st 
+14128	ruinate roof seeking beauteous 
+14170	repair chief desire should which 
+14217	change mind thought may o 
+14269	lodged fairer hate gentle than love shall 
+14318	presence gracious kind 
+14362	hearted least self prove kind at or 
+14409	self another make love thee 
+14453	beauty thine live still may thee or 
+14507	11 
+14532	wane fast grow shalt st 
+14584	departest thine one which from 
+14636	youngly bestow fresh blood st which 
+14690	convertest mayst youth thine call when from 
+14749	increase herein wisdom lives beauty 
+14795	decay folly cold age without 
+14839	minded cease times should were if all 
+14889	threescore year away world make would 
+14939	store nature whom those made hath let 
+14989	featureless barrenly harsh perish rude 
+15039	endowed gave whom best look more she thee 
+15090	bounteous cherish bounty gift shouldst which 
+15147	carved thereby meant seal she thee her 
+15201	print copy shouldst die more let 
+15259	12 
+15284	tells clock count time when do 
+15334	sunk hideous brave night day see 
+15382	violet prime past behold when 
+15422	silvered sable curls white er o all 
+15471	lofty trees barren leaves see when 
+15515	erst canopy herd heat did which from 
+15559	sheaves girded summer green up all 
+15606	bristly bier borne beard white on 
+15657	question beauty make then do 
+15698	wastes among time must go 
+15745	beauties sweets forsake themselves since do 
+15797	fast grow others die see they 
+15841	scythe defence gainst nothing can time make 
+15897	breed takes brave save hence when thee 
+15957	13 
+15982	self were love o are 
+16029	longer self yours live than here no 
+16079	prepare coming end against should 
+16126	semblance other sweet some give 
+16174	lease beauty hold should which 
+16223	determination find were then no 
+16263	decease self after again 
+16309	issue form bear sweet should when 
+16363	lets decay fall house fair who 
+16406	uphold husbandry might honour which 
+16449	stormy gusts winter against day 
+16493	eternal barren rage cold death 
+16537	unthrifts dear none know love o 
+16587	son father had say let 
+16635	14 
+16660	judgement stars pluck from do 
+16707	astronomy methinks yet 
+16745	luck evil tell good or 
+16787	dearths seasons plagues quality or 
+16835	minutes brief fortune nor tell can 
+16879	pointing rain thunder wind each 
+16927	princes go say well or if shall 
+16970	predict oft find heaven 
+17011	derive knowledge thine eyes from 
+17057	constant stars read art such them 
+17103	thrive beauty together truth shall 
+17148	convert store wouldst self from if 
+17200	prognosticate else thee or 
+17243	date doom beauty truth end 
+17299	15 
+17324	consider grows thing every when 
+17366	perfection moment holds little 
+17410	presenteth huge stage nought shows 
+17462	influence comment whereon secret stars 
+17512	plants increase perceive men when 
+17560	cheered checked sky self same even 
+17610	decrease vaunt sap youthful height their at 
+17662	memory brave wear state out their 
+17707	inconstant conceit stay then 
+17752	sets rich sight youth before most 
+17800	debateth wasteful decay time where 
+17843	sullied change youth night day 
+17892	war time love all 
+17939	engraft takes new from 
+17989	16 
+18014	mightier wherefore way do 
+18057	tyrant bloody war time make upon 
+18099	fortify decay self 
+18138	rhyme barren blessed means than more 
+18187	top hours happy stand now on 
+18231	unset gardens maiden many yet 
+18269	flowers virtuous living wish bear would 
+18322	liker painted counterfeit much than 
+18367	lines repair life should 
+18415	pencil pupil pen time which or 
+18461	inward outward neither worth fair nor 
+18505	self live eyes men can make 
+18552	keeps self still away give 
+18604	skill drawn live own sweet must 
+18662	17 
+18687	verse believe who time come 
+18732	filled deserts high most were if 
+18782	tomb knows though heaven yet 
+18829	hides shows parts half life which 
+18886	write beauty could eyes if 
+18931	numbers graces number fresh all 
+18979	poet age lies say would come 
+19024	touched touches earthly faces heavenly ne er such 
+19078	yellowed papers age should their 
+19127	scorned less truth tongue old men like than 
+19182	termed rights poet rage true 
+19231	stretched metre antique song an 
+19274	alive child yours time some were 
+19325	rhyme twice live should 
+19380	18 
+19405	compare summer day thee shall 
+19448	temperate lovely art more 
+19492	darling buds winds rough shake may do 
+19541	lease date summer short too hath all 
+19590	shines sometime hot eye heaven too 
+19636	dimmed complexion often gold 
+19680	declines sometime every fair from 
+19727	untrimmed changing chance course nature or 
+19780	fade eternal summer shall 
+19822	ow possession lose fair nor st 
+19870	brag wand shade rest death nor shall 
+19923	lines eternal grow st time when 
+19970	breathe eyes long men can see or 
+20019	gives lives long life thee 
+20077	1 
+20102	paws devouring blunt lion time 
+20148	brood devour earth own sweet make her 
+20198	jaws tiger keen fierce teeth pluck from 
+20252	phoenix lived burn blood long her 
+20302	seasons fleet sorry glad st make 
+20351	footed whate swift wilt er time do 
+20398	fading sweets wide world her all 
+20446	crime heinous forbid most one thee 
+20491	carve brow hours fair love o 
+20542	antique lines pen draw thine nor there no 
+20593	untainted allow course do 
+20634	succeeding pattern beauty men 
+20677	despite worst wrong old time yet do 
+20728	verse young live ever love shall 
+20780	2 
+20805	painted nature woman face own hand 
+20855	passion mistress hast master 
+20903	acquainted gentle woman heart 
+20948	shifting fashion change women false 
+21001	rolling theirs bright less false eye than an more 
+21059	gazeth gilding whereupon object 
+21102	hues controlling hue man all 
+21147	amazeth steals souls women eyes men which 
+21201	created wert woman first 
+21245	doting wrought fell nature till she thee 
+21295	defeated addition thee 
+21335	adding purpose thing nothing one 
+21381	pricked pleasure women since out she thee 
+21439	treasure use mine their love 
+21500	21 
+21525	muse 
+21568	stirred verse painted beauty 
+21613	ornament self use heaven doth who 
+21658	rehearse every fair doth 
+21705	couplement compare making proud 
+21745	gems moon rich sun sea earth 
+21799	april flowers rare born things first all 
+21855	rondure hems huge air heaven 
+21903	write truly true love let o 
+21945	believe fair love then 
+21989	bright child mother though any 
+22036	candles fixed air gold those heaven 
+22084	hearsay say like them well more let 
+22134	sell praise purpose 
+22187	22 
+22212	persuade glass old am shall 
+22256	date youth long one are 
+22302	furrows behold time when thee 
+22347	expiate days death look should then 
+22392	cover beauty doth thee all 
+22437	seemly raiment heart 
+22479	breast thine live doth which 
+22529	elder art can than how then 
+22571	wary thyself therefore love o 
+22614	self thee 
+22658	chary bearing keep heart which 
+22706	faring babe tender nurse ill from her 
+22751	presume slain heart mine when on 
+22801	gav back thine again st give 
+22855	23 
+22880	unperfect actor stage an on 
+22919	beside put part fear who 
+22964	replete fierce rage thing much too some or 
+23016	weakens abundance strength whose own heart 
+23069	forget trust fear say 
+23111	rite ceremony perfect love 
+23151	decay strength seem own mine love 
+23201	ercharged burthen might own mine love o 
+23255	eloquence looks then let o 
+23296	presagers dumb speaking breast 
+23341	recompense plead look who love 
+23389	expressed tongue than hath more 
+23445	silent writ learn read hath love o 
+23494	belongs fine wit eyes hear love 
+23549	24 
+23574	stelled played painter eye mine hath 
+23628	table form beauty heart 
+23671	frame held wherein body tis 
+23714	perspective painter best art 
+23759	painter skill through see must 
+23810	pictured image lies find true where 
+23858	shop hanging bosom still which 
+23904	glazed windows thine eyes hath 
+23953	turns done eyes see now good 
+24005	shape drawn thine eyes mine 
+24057	windows breast sun through where are 
+24108	delights peep gaze therein thee on 
+24154	cunning want grace eyes art yet their 
+24206	draw heart see know they 
+24264	25 
+24289	stars favour those who their let are 
+24338	titles boast public proud honour 
+24382	bars triumph whilst fortune whom such 
+24428	unlooked joy honour most 
+24471	favourites spread leaves princes fair great their 
+24526	marigold sun eye at 
+24567	buried pride themselves lies their 
+24613	frown glory die their they at 
+24656	famoused painful warrior fight 
+24699	foiled victories thousand after once 
+24742	razed quite book honour from 
+24785	toiled forgot rest which all 
+24833	beloved happy am love then 
+24876	removed remove nor where may 
+24924	26 
+24949	vassalage whom love lord 
+24990	strongly knit merit duty hath 
+25031	embassage written send thee 
+25072	witness duty wit show 
+25112	duty wit poor great mine which 
+25156	wanting bare seem words show make may 
+25208	conceit hope thine some good 
+25254	naked bestow thought soul all 
+25307	guides whatsoever moving star till 
+25354	graciously aspect points fair on 
+25399	tattered apparel puts loving on 
+25442	respect worthy show sweet 
+25485	boast dare may how love then thee do 
+25535	mayst prove show head till where then 
+25599	27 
+25624	toil weary haste bed 
+25666	respose tired travel limbs dear 
+25715	journey begins head then 
+25755	expired work body mind when 
+25803	abide thoughts far where then from 
+25852	zealous pilgrimage intend thee 
+25892	drooping eyelids wide open keep 
+25935	darkness looking blind see which on do 
+25982	imaginary sight save soul 
+26021	sightless presents shadow view 
+26066	ghastly hung jewel night like which 
+26112	beauteous black new makes face old night her 
+26166	limbs lo mind thus night day 
+26214	quiet self find thee no 
+26265	28 
+26290	plight happy return can how then 
+26331	debarred benefit rest am 
+26372	eased oppression night day when 
+26420	oppressed night day 
+26468	reign enemies either each though 
+26515	torture consent shake hands do 
+26559	complain toil other one 
+26601	toil farther far off still how from thee 
+26649	bright please day art tell 
+26698	blot clouds dost grace heaven when do 
+26752	complexioned swart flatter night 
+26798	twire sparkling gild stars even st when 
+26855	daily sorrows longer draw day doth 
+26903	nightly length stronger seem grief night doth make 
+26969	2 
+26994	disgrace fortune eyes men when 
+27043	outcast beweep alone state all 
+27083	bootless deaf cries trouble heaven 
+27134	fate curse self look upon 
+27178	wishing rich hope like one more 
+27223	featured possessed friends like 
+27278	desiring scope art man 
+27328	contented enjoy least most 
+27371	despising almost self thoughts these yet 
+27422	haply state think then thee on 
+27467	arising lark break day like at 
+27512	hymns sullen gate sings earth heaven at from 
+27564	remembered brings wealth sweet such love 
+27619	scorn kings change state then 
+27677	3 
+27702	sessions silent thought sweet when 
+27751	summon remembrance past things up 
+27794	sought sigh lack thing many 
+27839	wail woes waste new dear old time 
+27891	unused flow drown eye can an then 
+27935	dateless hid precious friends night death 
+27990	cancelled afresh woe weep since long love 
+28042	vanished expense moan sight many th 
+28092	foregone grievances grieve can then at 
+28137	heavily woe er tell from o 
+28178	bemoaned moan fore account sad 
+28220	paid pay new before which if 
+28262	while friend dear think thee on if 
+28314	restored losses sorrows end are all 
+28365	31 
+28390	endeared bosom hearts all 
+28432	lacking supposed dead which 
+28474	reigns parts loving love there all 
+28528	buried thought friends those which all 
+28577	obsequious tear holy many how 
+28616	religious stol n eye dear mine hath love from 
+28666	interest appear dead which now 
+28712	hidden removed lie things thee 
+28759	buried grave live art doth where love 
+28810	trophies hung lovers gone 
+28855	parts who give did their thee all 
+28902	due alone thine many now 
+28943	images loved view their thee 
+28986	hast they all 
+29039	32 
+29064	survive contented day well if 
+29106	churl cover dust bones death when shall 
+29162	survey shalt re fortune once more 
+29206	deceased lines lover rude poor these 
+29254	bett compare ring time them 
+29302	outstripped pen every though they 
+29350	reserve rhyme them their love 
+29400	exceeded happier height men 
+29442	vouchsafe loving thought then o 
+29490	muse growing grown age friend had 
+29544	dearer birth brought had than love 
+29593	equipage ranks march better 
+29634	poets died prove since better 
+29681	style theirs read their love ll 
+29743	33 
+29768	glorious morning seen full many 
+29813	tops mountain flatter sovereign eye 
+29862	meadows kissing golden green face 
+29909	gilding alchemy streams heavenly pale 
+29956	permit basest ride clouds anon 
+29998	celestial rack ugly face on 
