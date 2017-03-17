@@ -1,5 +1,5 @@
 # Andrei Constantinescu
-# MDP-Centrale---Assigment-2-Similarity-joins
+# MDP-Centrale---Assignment-2-Similarity-joins
 
 ## Preliminary information
 
