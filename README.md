@@ -298,8 +298,8 @@ We ran both algorithms first on a sample of the dataset containing 618 lines. Th
 in part because we were unable to run the naive algorithm on the whole dataset, because of memory problems. <br /><br />
 
 Below are the number of computation performed by both algorithms on the reduced dataset:<br />
-#Computation Naive algorithm Reduced Dataset : 190 962<br />
-#Computation Inverted index algorithm Reduced Dataset : 5454<br />
+Computations Naive algorithm Reduced Dataset : 190 962<br />
+Computations Inverted index algorithm Reduced Dataset : 5454<br />
 We see that computation are reduced by a factor of 40 here.<br /><br />
 
 There is no theoretical gurantee that the Inverted Index technique will require less computations than its naive counterpart,
@@ -310,8 +310,8 @@ see that the Inverted Index technique requires empirically far less computation 
 
 Even though we could not run the Naive algorithm on the full dataset because of memory problems, we can easily compute the number
 of computations it would have required. <br />
-#Computations Naive algorithm = n * (n-1)/2 = 115 102 * (115 102-1) / 2 = 6 624 177 651<br />
-#Computations required Inverted indew algorithm = 121 891 000<br />
+Computations Naive algorithm = n * (n-1)/2 = 115 102 * (115 102-1) / 2 = 6 624 177 651<br />
+Computations required Inverted indew algorithm = 121 891 000<br />
 So the Inverted index algorithm reduces the number of computations by a factor of 60 on the full dataset. And this is without mentioning the memory gain which is much greater, because here we do not store anything in memory, and discard non relevant pairs as soon as their non-similarity is confirmed.
 <br /><br />
 
