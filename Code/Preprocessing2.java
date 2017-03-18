@@ -91,7 +91,7 @@ public class Preprocessing2 extends Configured implements Tool {
    public static class Reduce extends Reducer<LongWritable, Text, LongWritable, Text> {
 	   
 		   
-		 File wordcountFile = new File("/home/cloudera/workspace/document_similarity/Report/word_count.txt"); 
+		 File wordcountFile = new File("/home/cloudera/workspace/document_similarity/Input/word_count.txt"); 
 	  	 HashMap<String, Integer> wordCount = new HashMap<String, Integer>();  
 	  	 
 	  	 protected void setup(Context context) throws IOException, InterruptedException {
